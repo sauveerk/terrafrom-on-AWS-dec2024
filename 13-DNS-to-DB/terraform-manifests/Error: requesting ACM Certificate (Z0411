@@ -1,0 +1,13 @@
+Error: requesting ACM Certificate (Z0411670XJWCG63Q8LSU): operation error ACM: 
+RequestCertificate, https response error StatusCode: 400, RequestID: a896b4b6-cc24-4afc-b125-0cb41e301d1c, 
+api error ValidationException: 2 validation errors detected: Value '[*.cdots-learning.com, Z0411670XJWCG63Q8LSU]' at 
+'subjectAlternativeNames' failed to satisfy constraint: Member must satisfy constraint: 
+[Member must have length less than or equal to 253, Member must have length greater than or equal to 1,
+ Member must satisfy regular expression pattern: ^(\*\.)?(((?!-)[A-Za-z0-9-]{0,62}[A-Za-z0-9])\.)+((?!-)[A-Za-z0-9-]
+ {1,62}[A-Za-z0-9])$]; Value 'Z0411670XJWCG63Q8LSU' at 'domainName' failed to satisfy constraint
+ : Member must satisfy regular expression pattern: ^(\*\.)?(((?!-)[A-Za-z0-9-]{0,62}[A-Za-z0-9])\.
+ )+((?!-)[A-Za-z0-9-]{1,62}[A-Za-z0-9])$
+│ 
+│   with module.acm.aws_acm_certificate.this[0],
+│   on .terraform/modules/acm/main.tf line 19, in resource "aws_acm_certificate" "this":
+│   19: resource "aws_acm_certificate" "this" {
