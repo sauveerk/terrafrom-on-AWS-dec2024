@@ -15,7 +15,7 @@ provider "aws" {
 
 resource "aws_instance" "example_server" {
   ami           = "ami-0fd05997b4dff7aac"
-  instance_type = "t3.nano"
+  instance_type = "t3.micro"
 
   tags = {
     Name = "SauveerTFCloud"
